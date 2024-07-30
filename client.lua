@@ -1,11 +1,11 @@
-local modem = peripheral.wrap("modem")
+local modem = peripheral.find("modem")
 local my_channel = os.getComputerID()
 local target_channel = 0
 modem.open(my_channel)
-local status, basalt = pcall(require("basalt"))
-if not status then
+if not fs.exists("basalt.lua") then
     print("Basalt does not seem to be installed!\nInstall it via the following command:\nwget run https://basalt.madefor.cc/install.lua release latest.lua")
 end
+local basalt = require("basalt")
 
 local main = basalt.createFrame()
 local INIT = "init"
