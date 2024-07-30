@@ -1,4 +1,3 @@
-local fs = require("fs")
 local modem = peripheral.wrap("modem")
 local my_channel = os.getComputerID()
 local target_channel = 0

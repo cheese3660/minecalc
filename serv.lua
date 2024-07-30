@@ -4,7 +4,6 @@
 
 
 ]]
-local fs = require("fs")
 local textutils = require("textutils")
 local term = require("term")
 
